@@ -9,6 +9,7 @@ djangorestframework = "*"
 django-cors-headers = "*"
 gunicorn = "*"
 dj-database-url = "*"
+psycopg2 = "==2.9.1"
 
 [dev-packages]
 black = "==21.8b0"
