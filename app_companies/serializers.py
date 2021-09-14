@@ -64,7 +64,7 @@ class CompanyListSerializer(CompanyViewSerializer):
 
 
 class CompanyCreateSerializer(CompanyViewSerializer):
-    offices = OfficeSerializer(many=True)
+    offices = HeadquarterSerializer(many=True)
     headquarter = HeadquarterSerializer()
 
     class Meta(CompanyViewSerializer.Meta):
