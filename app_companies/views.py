@@ -28,21 +28,21 @@ class CompanyRetrieve(generics.RetrieveAPIView):
     serializer_class = CompanyViewSerializer
 
     def get_queryset(self):
-        return Company.objects.all().filter(pk=self.kwargs["pk"])
+        return Company.objects.filter(pk=self.kwargs["pk"])
 
 
 class CompanyHeadquarterUpdate(generics.UpdateAPIView):
     serializer_class = CompanyHeadquarterUpdateSerializer
 
     def get_queryset(self):
-        return Company.objects.all().filter(pk=self.kwargs["pk"])
+        return Company.objects.filter(pk=self.kwargs["pk"])
 
 
 class CompanyOfficesList(generics.ListAPIView):
     serializer_class = OfficeSerializer
 
     def get_queryset(self):
-        return Office.objects.all().filter(company_id=self.kwargs["pk"])
+        return Office.objects.filter(company_id=self.kwargs["pk"])
 
 
 @api_view(["GET"])
@@ -65,4 +65,4 @@ class OfficeDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = OfficeSerializer
 
     def get_queryset(self):
-        return Office.objects.all().filter(pk=self.kwargs["pk"])
+        return Office.objects.filter(pk=self.kwargs["pk"])
